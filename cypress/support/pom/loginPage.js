@@ -1,30 +1,43 @@
 ﻿
 class LoginPage {
- 
-  get emailInput() {
-    return cy.get('#signinEmail');
-  }
+    get loginTitle() {
+        return cy.get('h4').should('have.value', 'Log in');
+        
+    }
 
-  get passwordInput() {
-    return cy.get('#password');
-  }
+    get emailInput() {
+        return cy.get('#signinEmail');
+    }
 
-  get loginButton() {
-    return cy.get('button[type="submit"]');
-  }
+    get passwordInput() {
+        return cy.get('#password');
+    }
 
-  typeUsername(username) {
-    this.usernameInput.type(username);
-    return this;
-  }
+    get loginButton() {
+        return cy.get('button[type="submit"]');
+    }
 
-  typePassword(password) {
-    this.passwordInput.type(password);
-    return this;
-  }
+    typeUsername(username) {
+        this.usernameInput.type(username);
+        return this;
+    }
 
-  clickLoginButton() {
-    this.loginButton.click();
-  }
+    typePassword(password) {
+        this.passwordInput.type(password);
+        return this;
+    }
+
+    clickLoginButton() {
+        this.loginButton.click();
+    }
+
+    get registrationButton() {
+       
+        return cy.contains('button', 'Registration');
+    }
+
+    clickRegistrationButton() {
+        this.registrationButton.click();
+    }
 }
 export default new LoginPage();
