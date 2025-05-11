@@ -1,6 +1,11 @@
 {
+  "scripts": {
+    "test:qauto": "cypress run --config-file cypress.config.qauto.js",
+    "test:qauto2": "cypress run --config-file cypress.config.qauto2.js"
+  },
   "devDependencies": {
     "cypress": "^14.2.0",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "mochawesome": "^7.1.3"
   }
 }
