@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "cypress": "^14.2.0",
+    "cypress-xpath": "^2.0.1"
+  },
+  "scripts": {
+    "test": "cypress open",
+    "test-normal": "npx cypress open --env configFile=qauto"
+  }
+}
