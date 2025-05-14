@@ -10,34 +10,37 @@ class LoginPage {
     }
 
     get passwordInput() {
-        return cy.get('#password');
+        return cy.get('#signinPassword');
     }
 
-    get loginButton() {
-        return cy.get('button[type="submit"]');
+
+    typeEmail(username) {
+        this.emailInput.type(username);
+        //return this;
     }
 
-    typeUsername(username) {
-        this.usernameInput.type(username);
-        return this;
-    }
 
     typePassword(password) {
-        this.passwordInput.type(password);
-        return this;
+        this.passwordInput.clear().type(password);
+        //return this;
     }
 
-    clickLoginButton() {
-        this.loginButton.click();
-    }
 
     get registrationButton() {
-       
         return cy.contains('button', 'Registration');
     }
 
     clickRegistrationButton() {
         this.registrationButton.click();
     }
+
+    get loginButton() {
+        return cy.contains('button', 'Login');
+    }
+
+    clickLoginButton() {
+        this.loginButton.click();
+    }
+
 }
 export default new LoginPage();

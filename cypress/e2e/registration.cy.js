@@ -7,10 +7,11 @@ import RegistrationPage from '../support/pom/RegistrationPage';
 
 
 describe('Registration page test', () => {
-   
+
+    const baseUrl = Cypress.config().baseUrl;
 
     beforeEach(() => {
-        cy.visit("https://qauto.forstudy.space/", {
+        cy.visit(baseUrl, {
             auth: {
                 username: "guest",
                 password: "welcome2qauto"
